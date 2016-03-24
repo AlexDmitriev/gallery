@@ -3,25 +3,7 @@
 <head>
     <title>Gallery</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/stylesheets/app.css">
-    <style>
-        .fs-image {
-            background: #FFFFFF;
-            height: 100%;
-            position: fixed;
-            width: 100%;
-            z-index: 100;
-            top: 0;
-            left: 0;
-        }
-        .fs-image img {
-            margin: 50px;
-        }
-        .fs-image a {
-            display: block;
-            margin-left: 50px;;
-        }
-    </style>
+    <link rel="stylesheet" href="/stylesheets/css/app.css">
 </head>
 <body>
 
@@ -33,6 +15,10 @@
     </div>
 </script>
 
+<script id="error-template" type="text/template">
+    There is an error, sorry.
+</script>
+
 <script id="gallery-template" type="text/template">
     <h1>Gallery</h1>
     <section id="image-block"></section>
@@ -41,7 +27,7 @@
 
 <script id="albums-item-template" type="text/template">
     <h2><a href="{{ path('album') }}/<%= id %>" class="js-show-album"><%= name %></a></h2>
-    <div style="margin-bottom: 75px;">
+    <div class="images-list">
         <% _.each(images, function(image){ %>
             <span><a href="/data/<%= image['filename'] %>" class="js-show-image"><img src="/data/<%= image['filename'] %>" style="max-height: 75px; padding-right: 25px;" /></a></span>
         <% }); %>
@@ -82,12 +68,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.2/backbone-min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.marionette/2.4.5/backbone.marionette.js"></script>
 
-<script src="/scripts/js/app.js"></script>
-<script src="/scripts/js/app/entities.js"></script>
-<script src="/scripts/js/app/views.js"></script>
-<script src="/scripts/js/app/controllers.js"></script>
-<script src="/scripts/js/app/routes.js"></script>
-
+<script src="/scripts/js/dist/app.min.js"></script>
 
 <script type="text/javascript">
     var baseUrl = "{{ path('homepage') }}";

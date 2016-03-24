@@ -1,6 +1,30 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
-
-a {
-  color: #00B7FF; }
+  body a {
+    color: #00B7FF; }
+  body .images-list {
+    margin-bottom: 75px; }
+  body .paging {
+    margin-top: 25px; }
+    body .paging span, body .paging a {
+      padding: 5px;
+      font-weight: bold; }
+    body .paging a {
+      background-color: #00B7FF;
+      color: #FFFFFF;
+      text-decoration: none; }
+  body .fs-image {
+    background: #FFFFFF;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0; }
+    body .fs-image img {
+      margin: 50px;
+      max-width: 500px; }
+    body .fs-image a {
+      display: block;
+      margin-left: 50px; }

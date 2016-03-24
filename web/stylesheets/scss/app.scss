@@ -1,8 +1,57 @@
+$font-stack:        "Lucida Grande", Helvetica, Arial, sans-serif;
+$link-color:        #00B7FF;
+$background-color:  #FFFFFF;
+
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px $font-stack;
+
+  a {
+    color: $link-color;
+  }
+
+  .images-list {
+    margin-bottom: 75px;
+  }
+
+  .paging {
+    margin-top: 25px;
+
+    span, a {
+      padding: 5px;
+      font-weight: bold;
+    }
+
+    a {
+      background-color: $link-color;
+      color: $background-color;
+      text-decoration: none;
+    }
+  }
+
+  .fs-image {
+    background: $background-color;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0; left: 0;
+
+    img {
+      margin: 50px;
+      max-width: 500px;
+    }
+
+    a {
+      display: block;
+      margin-left: 50px;;
+    }
+  }
 }
 
-a {
-  color: #00B7FF;
-}
+
+
+
+
+
+
